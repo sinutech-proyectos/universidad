@@ -1,0 +1,327 @@
+/* ===== ESTILOS GENERALES DE LA PAGINA===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #212529;
+  background-color: #f5f7fa;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* ===== MENU DE NAVEGACION ===== */
+
+.nav {
+  background-color: #14213d;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #fb8500;
+}
+
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #fb8500;
+}
+
+.links a.active {
+  color: #fb8500;
+}
+
+/* ===== SECCION INICIO  ===== */
+
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.scroll-hint {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* ===== SIMULACION DE BOTONES  ===== */
+
+.btn {
+  display: inline-block;
+  background-color: #fb8500;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 5px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #e07600;
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.btn.outline:hover {
+  background-color: #ffffff;
+  color: #14213d;
+}
+
+/* ===== TITULO DE SECCION ===== */
+
+.section-title {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  padding: 60px 20px 0 20px;
+}
+
+.section-title .tag {
+  color: #fb8500;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  color: #14213d;
+  margin-top: 10px;
+}
+
+.section-title p {
+  margin-top: 10px;
+  color: #556;
+}
+
+/* ===== SECCION PRODUCTOS ===== */
+
+.productos {
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+
+.grid-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #f5f7fa;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h3 {
+  color: #14213d;
+  margin: 0 0 10px 0;
+}
+
+.card-body p {
+  color: #667;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-body .precio {
+  color: #14213d;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card-body a {
+  color: #fb8500;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SECCION CONTACTO ===== */
+
+.contacto {
+  background-color: #14213d;
+  color: #ffffff;
+  padding: 60px 20px;
+}
+
+.contacto-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto-info {
+  flex: 1;
+  min-width: 260px;
+}
+
+.contacto-info h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.contacto-info p {
+  color: #a9c1e8;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== FORMULARIO ===== */
+
+form {
+  flex: 1;
+  min-width: 260px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #a9c1e8;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.field textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  min-height: 90px;
+}
+
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== PIE DE PAGINA ===== */
+
+footer {
+  background-color: #14213d;
+  color: #cccccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ===== ESTILOS PARA PANTALLAS PEQUEÑAS ===== */
+
+@media (max-width: 700px) {
+  .links {
+    display: none;
+  }
+
+  .btn.outline {
+    margin-top: 10px;
+  }
+}
