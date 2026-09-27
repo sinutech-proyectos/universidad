@@ -10,11 +10,12 @@
 
   <header class="nav" id="navbar">
     <div class="logo">Compra<span>Ya</span></div>
-    <nav class="links">
+    <nav class="links" id="navLinks">
       <a href="index.html">Inicio</a>
       <a href="productos.html">Productos</a>
       <a href="contacto.html" class="active">Contacto</a>
     </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </header>
 
   <!-- CONTACTO -->
@@ -36,7 +37,7 @@
           <div>+57 </div>
         </div>
       </div>
-      <form>
+      <form id="contactForm" novalidate>
         <div class="field">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" placeholder="Tu nombre" required>
@@ -49,6 +50,7 @@
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
         </div>
+        <p id="formMsg" class="form-msg"></p>
         <button type="submit" class="btn">Enviar mensaje</button>
       </form>
     </div>
@@ -58,5 +60,6 @@
     &copy; 2026 CompraYa. Todos los derechos reservados nelson aleman.
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

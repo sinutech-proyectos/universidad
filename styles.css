@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  color: #212529;
+  color: #30363b;
   background-color: #f5f7fa;
   line-height: 1.6;
 }
@@ -58,6 +58,25 @@ p {
 
 .links a.active {
   color: #fb8500;
+}
+
+/* ===== BOTON HAMBURGUESA (oculto en escritorio, JS lo controla en móvil) ===== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== BADGE DEL CARRITO (productos.html) ===== */
+
+.cart-badge {
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: 20px;
 }
 
 /* ===== SECCION INICIO  ===== */
@@ -212,6 +231,21 @@ p {
   text-decoration: underline;
 }
 
+.btn-cart {
+  background: none;
+  border: none;
+  color: #fb8500;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.btn-cart:hover {
+  text-decoration: underline;
+}
+
 /* ===== SECCION CONTACTO ===== */
 
 .contacto {
@@ -304,6 +338,51 @@ form .btn {
   cursor: pointer;
 }
 
+.form-msg {
+  font-size: 14px;
+  margin-bottom: 10px;
+  min-height: 18px;
+}
+
+.form-msg.error {
+  color: #ff8080;
+}
+
+.form-msg.success {
+  color: #7ee787;
+}
+
+/* ===== NOTIFICACION TEMPORAL (TOAST) - creada por script.js ===== */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #14213d;
+  color: #ffffff;
+  padding: 14px 22px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  z-index: 1000;
+
+  /* Estado inicial: invisible y un poco más abajo */
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* Anima cualquier cambio de "opacity" y "transform" */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  /* Para que el toast no bloquee clics cuando está invisible */
+  pointer-events: none;
+}
+
+/* Cuando JS agrega la clase "show", el toast se muestra en su lugar */
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ===== PIE DE PAGINA ===== */
 
 footer {
@@ -319,6 +398,26 @@ footer {
 @media (max-width: 700px) {
   .links {
     display: none;
+  }
+
+  /* Cuando JS agrega la clase "show" (menú abierto), se muestra en columna */
+  .links.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .links.show a {
+    margin: 8px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    flex-wrap: wrap;
   }
 
   .btn.outline {

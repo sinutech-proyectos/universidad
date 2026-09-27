@@ -10,11 +10,15 @@
 
   <header class="nav" id="navbar">
     <div class="logo">Compra<span>Ya</span></div>
-    <nav class="links">
+    <nav class="links" id="navLinks">
       <a href="index.html">Inicio</a>
       <a href="productos.html" class="active">Productos</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+    <div class="cart-badge" id="cartBadge" title="Productos en el carrito">
+      🛒 <span id="cartCount">0</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </header>
 
   <!-- PRODUCTOS DESTACADOS -->
@@ -31,7 +35,7 @@
           <h3>Audífonos inalámbricos</h3>
           <p>Sonido envolvente, cancelación de ruido y hasta 20 horas de batería.</p>
           <p class="precio">$29.900</p>
-          <a href="contacto.html">Agregar al carrito</a>
+          <button class="btn-cart" data-nombre="Audífonos inalámbricos" data-precio="29900">Agregar al carrito</button>
         </div>
       </div>
       <div class="card">
@@ -40,7 +44,7 @@
           <h3>Smartwatch deportivo</h3>
           <p>Monitorea tu ritmo cardíaco, pasos y notificaciones desde tu muñeca.</p>
           <p class="precio">$49.900</p>
-          <a href="contacto.html">Agregar al carrito</a>
+          <button class="btn-cart" data-nombre="Smartwatch deportivo" data-precio="49900">Agregar al carrito</button>
         </div>
       </div>
       <div class="card">
@@ -49,7 +53,7 @@
           <h3>Mochila urbana</h3>
           <p>Resistente al agua, con compartimento acolchado para laptop de 15".</p>
           <p class="precio">$59.900</p>
-          <a href="contacto.html">Agregar al carrito</a>
+          <button class="btn-cart" data-nombre="Mochila urbana" data-precio="59900">Agregar al carrito</button>
         </div>
       </div>
     </div>
@@ -59,5 +63,6 @@
     &copy; 2026 CompraYa. Todos los derechos reservados nelson aleman.
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
