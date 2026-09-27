@@ -60,6 +60,20 @@ p {
   color: #fb8500;
 }
 
+/* ===== AGRUPA MENU + CARRITO + HAMBURGUESA (evita que .nav los reparta) =====
+   .nav sigue teniendo siempre 2 hijos directos: .logo y .nav-right, sin
+   importar si la página tiene o no el badge del carrito. Así
+   "justify-content: space-between" en .nav siempre deja el logo a la
+   izquierda y este grupo pegado a la derecha, en vez de repartir el
+   espacio entre 3 o 4 elementos sueltos (que fue lo que centró el menú
+   en productos.html). */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 /* ===== BOTON HAMBURGUESA (oculto en escritorio, JS lo controla en móvil) ===== */
 
 .menu-toggle {
@@ -76,7 +90,6 @@ p {
 .cart-badge {
   color: #ffffff;
   font-size: 16px;
-  margin-left: 20px;
 }
 
 /* ===== SECCION INICIO  ===== */
@@ -416,8 +429,12 @@ footer {
     display: block;
   }
 
-  .nav {
+  /* El grupo (carrito + hamburguesa) se queda en la fila superior, y
+     cuando .links gana "width: 100%" (arriba) se ve forzado a bajar
+     a una segunda línea, ya que aquí sí permitimos el "wrap". */
+  .nav-right {
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .btn.outline {
